@@ -16,15 +16,23 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-6">
         <div className="grid gap-10 md:grid-cols-3">
           <div className="flex items-start gap-3">
-            <Image
-              src="/logo.jpeg"
-              alt="Tour Study Uganda logo"
-              width={100}
-              height={50}
-              className="rounded-2xl object-cover"
-            />
-            <div>
-              <h2 className="text-2xl font-bold">Tour Study Uganda</h2>
+           
+          <Image
+            src="/imglogo.png"
+            alt="Tour Study Uganda logo"
+            width={100}
+            height={50}
+            className="rounded-2xl object-cover shadow-soft"
+          />
+          <div>
+            <p className="font-semibold leading-none">
+              Tour Study<span className="text-xs">ug</span>
+            </p>
+            <p className="text-xs text-slate-500 mt-1">
+              A FUTURE BEYOND BORDERS
+            </p>
+          
+        
               <p className="mt-4 max-w-sm text-sm leading-7 text-slate-300">
                 We help ambitious Ugandan students find realistic study options
                 abroad, prepare stronger applications, and move with confidence.

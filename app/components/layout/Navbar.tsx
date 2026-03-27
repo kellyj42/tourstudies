@@ -21,21 +21,29 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center gap-6">
         <Link href="/" className="flex items-center gap-3">
           <Image
-            src="/logo.jpeg"
+            src="/imglogo.png"
             alt="Tour Study Uganda logo"
             width={100}
             height={50}
             className="rounded-2xl object-cover shadow-soft"
           />
           <div>
-            <p className="font-semibold text-primary leading-none">Tour Study Uganda</p>
-            <p className="text-xs text-slate-500 mt-1">Student-first global admissions guidance</p>
+            <p className="font-semibold text-primary leading-none">
+              Tour Study<span className="text-xs">ug</span>
+            </p>
+            <p className="text-xs text-slate-500 mt-1">
+              A FUTURE BEYOND BORDERS
+            </p>
           </div>
         </Link>
 
         <nav className="hidden md:flex items-center gap-7 text-sm font-medium">
           {links.map((link) => (
-            <Link key={link.name} href={link.href} className="text-slate-700 transition hover:text-primary">
+            <Link
+              key={link.name}
+              href={link.href}
+              className="text-slate-700 transition hover:text-primary"
+            >
               {link.name}
             </Link>
           ))}
