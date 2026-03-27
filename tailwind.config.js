@@ -9,8 +9,17 @@ module.exports = {
     "./src/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
-    extend: {},
+  extend: {
+    colors: {
+      primary: "#1F4A7C",
+      accent: "#E5B567",
+    },
   },
-  plugins: [],
+},
+  plugins: [
+  require('@tailwindcss/forms'),
+  require('@tailwindcss/typography'),
+  require('tailwindcss-animate'),
+],
 }
 
