@@ -1,117 +1,112 @@
-"use client";
+import Link from "next/link";
+import { Mail, MapPin, MessageCircle, Phone } from "lucide-react";
 
-import { Phone, Mail, MessageCircle, MapPin } from "lucide-react";
+const contactCards = [
+  {
+    title: "WhatsApp",
+    detail: "0758 335558",
+    href: "https://wa.me/256758335558",
+    icon: MessageCircle,
+    accent: "text-green-600",
+  },
+  {
+    title: "Call",
+    detail: "0701 882166",
+    href: "tel:+256701882166",
+    icon: Phone,
+    accent: "text-primary",
+  },
+  {
+    title: "Email",
+    detail: "tourstudyug@gmail.com",
+    href: "mailto:tourstudyug@gmail.com",
+    icon: Mail,
+    accent: "text-accent",
+  },
+];
 
 export default function Contact() {
   return (
-    <section
-      id="contact"
-      className="py-20 bg-gray-50 scroll-mt-24"
-    >
+    <section className="py-24 bg-gray-50">
       <div className="max-w-6xl mx-auto px-6">
-
-        {/* 🔝 Heading */}
-        <div className="text-center animate-in fade-in duration-700">
-          <div className="w-16 h-1 bg-accent mx-auto mb-4"></div>
-          <h2 className="text-3xl md:text-4xl font-bold text-primary">
-            Get In Touch
-          </h2>
-          <p className="mt-4 text-gray-600">
-            Reach out via WhatsApp or send us a message below.
+        <div className="text-center">
+          <div className="w-16 h-1 rounded-full bg-accent mx-auto mb-4"></div>
+          <h1 className="text-3xl md:text-5xl font-bold text-primary">Contact Tour Study Uganda</h1>
+          <p className="mt-4 text-lg text-slate-600 max-w-2xl mx-auto leading-8">
+            Reach out for a conversation about study options, application preparation, or what the process could look like for you.
           </p>
         </div>
 
-        {/* 🔲 Contact Cards */}
-        <div className="mt-12 grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-
-          <a href="https://wa.me/256758335558" target="_blank" className="bg-white p-6 rounded-xl shadow-md hover:shadow-xl transition">
-            <MessageCircle className="mx-auto text-green-500" size={32} />
-            <h3 className="mt-4 font-semibold text-lg text-center">WhatsApp</h3>
-            <p className="text-sm text-gray-500 text-center">0758 335558</p>
-          </a>
-
-          <a href="tel:+256701882166" className="bg-white p-6 rounded-xl shadow-md hover:shadow-xl transition">
-            <Phone className="mx-auto text-primary" size={32} />
-            <h3 className="mt-4 font-semibold text-lg text-center">Call</h3>
-            <p className="text-sm text-gray-500 text-center">0701 882166</p>
-          </a>
-
-          <a href="mailto:tourstudyug@gmail.com" className="bg-white p-6 rounded-xl shadow-md hover:shadow-xl transition">
-            <Mail className="mx-auto text-accent" size={32} />
-            <h3 className="mt-4 font-semibold text-lg text-center">Email</h3>
-            <p className="text-sm text-gray-500 text-center break-all">
-              tourstudyug@gmail.com
-            </p>
-          </a>
-
-          <div className="bg-white p-6 rounded-xl shadow-md">
-            <MapPin className="mx-auto text-red-500" size={32} />
-            <h3 className="mt-4 font-semibold text-lg text-center">Location</h3>
-            <p className="text-sm text-gray-500 text-center">
-              Lukuli Road, Kampala
-            </p>
-          </div>
-
+        <div className="mt-12 grid gap-6 md:grid-cols-3">
+          {contactCards.map((card) => {
+            const Icon = card.icon;
+            return (
+              <Link
+                key={card.title}
+                href={card.href}
+                target={card.href.startsWith("http") ? "_blank" : undefined}
+                rel={card.href.startsWith("http") ? "noreferrer" : undefined}
+                className="rounded-[1.75rem] bg-white p-6 shadow-soft transition hover:-translate-y-1"
+              >
+                <Icon className={card.accent} size={32} />
+                <h3 className="mt-4 text-lg font-semibold text-primary">{card.title}</h3>
+                <p className="mt-2 text-sm text-slate-600 break-all">{card.detail}</p>
+              </Link>
+            );
+          })}
         </div>
 
-        {/* 📝 FORM SECTION */}
-        {/* 🔲 Map + Contact Grid */}
-<div className="mt-16 grid lg:grid-cols-2 gap-10 items-start">
+        <div className="mt-16 grid gap-10 lg:grid-cols-2 items-start">
+          <div className="h-[460px] overflow-hidden rounded-[2rem] shadow-soft">
+            <iframe
+              src="https://www.google.com/maps?q=Lukuli+Road+Kampala&output=embed"
+              width="100%"
+              height="100%"
+              style={{ border: 0 }}
+              allowFullScreen
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              title="Tour Study Uganda map"
+            ></iframe>
+          </div>
 
-  {/* 🗺️ Google Map */}
-  <div className="w-full h-[500px] rounded-xl overflow-hidden shadow-lg animate-in fade-in slide-in-from-left duration-700">
-    <iframe
-      src="https://www.google.com/maps?q=Lukuli+Road+Kampala&output=embed"
-      width="100%"
-      height="100%"
-      style={{ border: 0 }}
-      allowFullScreen
-      loading="lazy"
-      referrerPolicy="no-referrer-when-downgrade"
-    ></iframe>
-  </div>
+          <div className="rounded-[2rem] bg-white p-8 shadow-soft">
+            <h2 className="text-2xl font-semibold text-primary">What to prepare before contacting us</h2>
+            <div className="mt-6 space-y-4 text-sm leading-7 text-slate-600">
+              <p>1. Your preferred course or field of study.</p>
+              <p>2. Your latest academic results or qualifications.</p>
+              <p>3. Any country preferences or budget concerns.</p>
+              <p>4. Questions about applications, visas, or timelines.</p>
+            </div>
 
-  {/* 📞 Contact + Form */}
-  <div className="space-y-10">
+            <div className="mt-8 rounded-[1.5rem] bg-mist p-5">
+              <div className="flex items-start gap-3 text-slate-700">
+                <MapPin className="mt-1 text-primary" size={18} />
+                <div>
+                  <p className="font-semibold text-primary">Office Location</p>
+                  <p className="mt-1">Lukuli Road, Kampala</p>
+                </div>
+              </div>
+            </div>
 
-    {/* Contact Cards */}
-   
-    {/* 📝 Form */}
-    <div className="bg-white p-6 rounded-xl shadow-lg">
-      <h3 className="text-xl font-semibold text-primary mb-4">
-        Send Us a Message
-      </h3>
-
-      <form className="grid gap-4">
-
-        <input
-          type="text"
-          placeholder="Your Name"
-          className="rounded-md border-gray-300"
-        />
-
-        <input
-          type="email"
-          placeholder="Your Email"
-          className="rounded-md border-gray-300"
-        />
-
-        <textarea
-          placeholder="Your Message"
-          rows={4}
-          className="rounded-md border-gray-300"
-        ></textarea>
-
-        <button className="bg-primary text-white py-2 rounded-lg hover:bg-blue-800 transition">
-          Send Message
-        </button>
-
-      </form>
-    </div>
-
-  </div>
-</div>
-
+            <div className="mt-8 flex flex-col gap-4 sm:flex-row">
+              <Link
+                href="https://wa.me/256758335558"
+                target="_blank"
+                rel="noreferrer"
+                className="inline-flex justify-center rounded-full bg-accent px-6 py-3 font-semibold text-white"
+              >
+                Message on WhatsApp
+              </Link>
+              <Link
+                href="mailto:tourstudyug@gmail.com"
+                className="inline-flex justify-center rounded-full border border-slate-300 px-6 py-3 font-semibold text-primary"
+              >
+                Email Us
+              </Link>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   );

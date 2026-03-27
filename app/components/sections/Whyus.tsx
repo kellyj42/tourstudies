@@ -1,78 +1,67 @@
-"use client";
-
+import Image from "next/image";
 import { HeartHandshake, ShieldCheck, Sparkles } from "lucide-react";
 
+const reasons = [
+  {
+    title: "Empathy-led guidance",
+    description:
+      "We understand the emotional and practical weight behind a study abroad decision, so our advice is patient, realistic, and personal.",
+    icon: HeartHandshake,
+  },
+  {
+    title: "Support beyond admission",
+    description:
+      "Students need help with documents, next steps, travel readiness, and expectations. We support the full journey, not just the first form.",
+    icon: ShieldCheck,
+  },
+  {
+    title: "Focused on better-fit pathways",
+    description:
+      "We help students explore strong alternatives, including science and niche program routes that may be harder to access locally.",
+    icon: Sparkles,
+  },
+];
+
 export default function WhyUs() {
-  const reasons = [
-    {
-      title: "Empathy-Driven Guidance",
-      description: `Empathy Driven Guidance: We approach our clients’ study abroad journey with firsthand 
-experience drawn from our personal experiences. Giving our clients the best guidance 
-and travel insights.`,
-      icon: <HeartHandshake size={28} />,
-    },
-    {
-      title: "Holistic Support",
-      description: `Holistic support: Our commitment extends far beyond securing an admission letter. Tour 
-Study Uganda Limited provides comprehensive support to ensure a seamless transition 
-and successfully settling into the new country`,
-      icon: <ShieldCheck size={28} />,
-    },
-    {
-      title: "Specialized Programs",
-      description:
-        `Specialized Science and Niche program focus: We tackle the present limitations in 
-Uganda education through connecting our clients to top tier universities abroad.`,
-      icon: <Sparkles size={28} />,
-    },
-  ];
-
   return (
-    <section id="why-us" className="py-20 bg-primary text-white scroll-mt-24">
-      <div className="max-w-7xl mx-auto px-6">
-        {/* Heading */}
-        <div className="text-center mb-12 animate-in fade-in duration-700">
-          <div className="w-16 h-1 bg-accent mx-auto mb-4"></div>
-          <h2 className="text-3xl md:text-4xl font-bold">Why Choose Us</h2>
-          <p className="mt-4 text-gray-200 max-w-xl mx-auto">
-            We go beyond just securing admission — we guide, support, and
-            empower you.
+    <section id="why-us" className="py-24 bg-primary text-white">
+      <div className="max-w-7xl mx-auto px-6 grid items-center gap-12 lg:grid-cols-2">
+        <div>
+          <div className="w-16 h-1 rounded-full bg-accent mb-6"></div>
+          <h2 className="text-3xl font-bold md:text-4xl">Why families feel safer working with us.</h2>
+          <p className="mt-5 max-w-2xl text-lg leading-8 text-slate-200">
+            Legitimacy comes from clarity, care, and confidence. These are the qualities this section now communicates more strongly.
           </p>
-        </div>
 
-        {/* 🔲 Main Grid */}
-        <div className="grid md:grid-cols-2 gap-12 items-center">
-          {/* 🤝 Image Side */}
-          <div className="animate-in fade-in slide-in-from-left duration-700">
-            <img
-              src="https://images.unsplash.com/photo-1556745757-8d76bdb6984b"
-              alt="Handshake partnership"
-              className="rounded-xl shadow-lg object-cover w-full h-[400px]"
-            />
-          </div>
-
-          {/* 💡 Content Side */}
-          <div className="space-y-6">
-            {reasons.map((item, index) => (
-              <div
-                key={index}
-                className="bg-white/10 backdrop-blur-md p-5 rounded-xl border border-white/20 hover:bg-white/20 transition animate-in fade-in zoom-in duration-700"
-              >
-                <div className="flex items-start gap-4">
-                  {/* Icon */}
-                  <div className="text-accent mt-1">{item.icon}</div>
-
-                  {/* Text */}
-                  <div>
-                    <h3 className="text-lg font-semibold">{item.title}</h3>
-                    <p className="text-sm text-gray-200 mt-1">
-                      {item.description}
-                    </p>
+          <div className="mt-10 space-y-5">
+            {reasons.map((item) => {
+              const Icon = item.icon;
+              return (
+                <div key={item.title} className="rounded-[1.5rem] border border-white/15 bg-white/10 p-5 backdrop-blur">
+                  <div className="flex gap-4">
+                    <div className="mt-1 rounded-2xl bg-white/10 p-3 text-accent">
+                      <Icon size={22} />
+                    </div>
+                    <div>
+                      <h3 className="text-lg font-semibold">{item.title}</h3>
+                      <p className="mt-2 text-sm leading-7 text-slate-200">{item.description}</p>
+                    </div>
                   </div>
                 </div>
-              </div>
-            ))}
+              );
+            })}
           </div>
+        </div>
+
+        <div className="relative overflow-hidden rounded-[2rem] border border-white/10 shadow-soft">
+          <Image
+            src="https://images.unsplash.com/photo-1556745757-8d76bdb6984b?auto=format&fit=crop&w=1200&q=80"
+            alt="A supportive meeting between advisor and student"
+            width={1200}
+            height={900}
+            className="h-full w-full object-cover"
+            sizes="(min-width: 1024px) 50vw, 100vw"
+          />
         </div>
       </div>
     </section>

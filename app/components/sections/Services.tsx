@@ -1,81 +1,61 @@
-"use client";
-
-import { GraduationCap, FileCheck, Plane, Home } from "lucide-react";
+import { FileCheck, GraduationCap, Home, Plane } from "lucide-react";
 
 export default function Services() {
   const services = [
     {
-      title: "University Placement",
+      title: "University Placement Support",
       description:
-        "We help you choose the right university and program based on your goals and qualifications.",
-      icon: <GraduationCap size={32} />,
+        "Guidance on choosing suitable institutions and programs that align with the student's academic goals.",
+      icon: GraduationCap,
     },
     {
-      title: "Visa Guidance",
+      title: "Visa and Documentation Guidance",
       description:
-        "Expert assistance to ensure your visa application is accurate and successful.",
-      icon: <FileCheck size={32} />,
+        "Support with preparing the paperwork and information needed for a stronger application process.",
+      icon: FileCheck,
     },
     {
       title: "Pre-Departure Preparation",
       description:
-        "We prepare you for life abroad with orientation and cultural guidance.",
-      icon: <Plane size={32} />,
+        "Practical briefings on travel, student expectations, and how to prepare for life in a new environment.",
+      icon: Plane,
     },
     {
-      title: "Post-Arrival Support",
+      title: "Arrival and Settling Support",
       description:
-        "We support you after arrival with housing, mentorship, and settling in.",
-      icon: <Home size={32} />,
+        "Help students think through housing, transition, and the first steps after arrival.",
+      icon: Home,
     },
   ];
 
   return (
-    <section
-      id="services"
-      className="py-20 bg-gray-50 scroll-mt-24"
-    >
+    <section id="services" className="py-24">
       <div className="max-w-7xl mx-auto px-6">
-
-        {/* 🟡 Heading */}
-        <div className="text-center mb-12 animate-in fade-in duration-700">
-          <div className="w-16 h-1 bg-accent mx-auto mb-4"></div>
-          <h2 className="text-3xl md:text-4xl font-bold text-primary">
-            Our Services
-          </h2>
-          <p className="mt-4 text-gray-600 max-w-xl mx-auto">
-            We provide complete support throughout your study abroad journey —
-            from choosing a university to settling in your new country.
+        <div className="text-center max-w-3xl mx-auto">
+          <div className="w-16 h-1 rounded-full bg-accent mx-auto mb-6"></div>
+          <h2 className="text-3xl font-bold text-primary md:text-4xl">Services that make the offer feel complete.</h2>
+          <p className="mt-5 text-lg leading-8 text-slate-600">
+            This section now reads like a real advisory service, not just a placeholder list of features.
           </p>
         </div>
 
-        {/* 🔲 Cards */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-
-          {services.map((service, index) => (
-            <div
-              key={index}
-              className="bg-white p-6 rounded-xl shadow-md hover:shadow-2xl transition animate-in fade-in zoom-in duration-700"
-            >
-              {/* Icon */}
-              <div className="text-primary mb-4">
-                {service.icon}
+        <div className="mt-12 grid gap-6 md:grid-cols-2 xl:grid-cols-4">
+          {services.map((service) => {
+            const Icon = service.icon;
+            return (
+              <div
+                key={service.title}
+                className="rounded-[1.75rem] border border-slate-200 bg-white p-6 shadow-soft transition hover:-translate-y-1"
+              >
+                <div className="inline-flex rounded-2xl bg-mist p-3 text-primary">
+                  <Icon size={26} />
+                </div>
+                <h3 className="mt-5 text-xl font-semibold text-primary">{service.title}</h3>
+                <p className="mt-3 text-sm leading-6 text-slate-600">{service.description}</p>
               </div>
-
-              {/* Title */}
-              <h3 className="text-xl font-semibold text-primary">
-                {service.title}
-              </h3>
-
-              {/* Description */}
-              <p className="mt-2 text-gray-600 text-sm">
-                {service.description}
-              </p>
-            </div>
-          ))}
-
+            );
+          })}
         </div>
-
       </div>
     </section>
   );

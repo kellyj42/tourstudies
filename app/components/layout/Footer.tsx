@@ -1,65 +1,85 @@
-"use client";
+import Image from "next/image";
+import Link from "next/link";
+import { Mail, MapPin, MessageCircle, Phone } from "lucide-react";
+
+const quickLinks = [
+  { label: "Home", href: "/#home" },
+  { label: "About", href: "/#about" },
+  { label: "Destinations", href: "/#destinations" },
+  { label: "Services", href: "/#services" },
+  { label: "Contact", href: "/contact" },
+];
 
 export default function Footer() {
   return (
-    <footer className="bg-primary text-white pt-16 pb-8">
+    <footer className="bg-[#0d2238] text-white pt-16 pb-8">
       <div className="max-w-7xl mx-auto px-6">
-
-        {/* 🔲 Top Section */}
-        <div className="grid md:grid-cols-3 gap-10">
-
-          {/* 🏢 Brand */}
-          <div>
-            <h2 className="text-2xl font-bold">Tour Study UG</h2>
-            <p className="mt-4 text-gray-200 text-sm">
-              A Future Beyond Borders. We help Ugandan students access
-              world-class education opportunities abroad with full support.
-            </p>
+        <div className="grid gap-10 md:grid-cols-3">
+          <div className="flex items-start gap-3">
+            <Image
+              src="/logo.jpeg"
+              alt="Tour Study Uganda logo"
+              width={100}
+              height={50}
+              className="rounded-2xl object-cover"
+            />
+            <div>
+              <h2 className="text-2xl font-bold">Tour Study Uganda</h2>
+              <p className="mt-4 max-w-sm text-sm leading-7 text-slate-300">
+                We help ambitious Ugandan students find realistic study options
+                abroad, prepare stronger applications, and move with confidence.
+              </p>
+            </div>
           </div>
 
-          {/* 🔗 Quick Links */}
           <div>
             <h3 className="font-semibold text-lg mb-4">Quick Links</h3>
-            <ul className="space-y-2 text-gray-200 text-sm">
-
-              <li><a href="#home" className="hover:text-accent">Home</a></li>
-              <li><a href="#about" className="hover:text-accent">About</a></li>
-              <li><a href="#services" className="hover:text-accent">Services</a></li>
-              <li><a href="#why-us" className="hover:text-accent">Why Us</a></li>
-              <li><a href="#contact" className="hover:text-accent">Contact</a></li>
-
+            <ul className="space-y-3 text-sm text-slate-300">
+              {quickLinks.map((link) => (
+                <li key={link.label}>
+                  <Link
+                    href={link.href}
+                    className="transition hover:text-white"
+                  >
+                    {link.label}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
 
-          {/* 📞 Contact Info */}
           <div>
-            <h3 className="font-semibold text-lg mb-4">Contact</h3>
-            <ul className="space-y-2 text-gray-200 text-sm">
-              <li>📞 0701 882166</li>
-              <li>💬 0758 335558</li>
-              <li>✉️ tourstudyug@gmail.com</li>
-              <li>📍 Lukuli Road, Kampala</li>
+            <h3 className="font-semibold text-lg mb-4">Reach Us</h3>
+            <ul className="space-y-3 text-sm text-slate-300">
+              <li className="flex items-center gap-3">
+                <Phone size={16} /> 0701 882166
+              </li>
+              <li className="flex items-center gap-3">
+                <MessageCircle size={16} /> 0758 335558
+              </li>
+              <li className="flex items-center gap-3">
+                <Mail size={16} /> tourstudyug@gmail.com
+              </li>
+              <li className="flex items-center gap-3">
+                <MapPin size={16} /> Lukuli Road, Kampala
+              </li>
             </ul>
 
-            {/* WhatsApp CTA */}
-            <a
+            <Link
               href="https://wa.me/256758335558"
               target="_blank"
-              className="inline-block mt-4 bg-accent text-white px-5 py-2 rounded-lg hover:opacity-90 transition"
+              rel="noreferrer"
+              className="inline-flex items-center gap-2 mt-5 rounded-full bg-accent px-5 py-2.5 font-semibold text-white"
             >
-              Chat on WhatsApp
-            </a>
+              <MessageCircle size={16} /> Chat on WhatsApp
+            </Link>
           </div>
-
         </div>
 
-        {/* 🟡 Divider */}
-        <div className="border-t border-white/20 mt-10 pt-6 text-center text-sm text-gray-300">
-
-          © {new Date().getFullYear()} Tour Study Uganda Limited. All rights reserved.
-
+        <div className="mt-10 border-t border-white/15 pt-6 text-center text-sm text-slate-400">
+          Copyright {new Date().getFullYear()} Tour Study Uganda Limited. All
+          rights reserved.
         </div>
-
       </div>
     </footer>
   );

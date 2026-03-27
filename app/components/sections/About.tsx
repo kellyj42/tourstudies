@@ -1,78 +1,54 @@
-"use client";
+import Image from "next/image";
 
 export default function About() {
   return (
-    <section id="about" className="py-20 bg-white text-gray-800 scroll-mt-24">
-      <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
-        {/* 🖼️ Image */}
-        <div className="animate-in fade-in slide-in-from-left duration-700">
-          <img
-            src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b"
-            alt="Students studying"
-            className="rounded-xl shadow-lg object-cover w-full h-[400px]"
+    <section id="about" className="py-24">
+      <div className="max-w-7xl mx-auto px-6 grid items-center gap-12 lg:grid-cols-2">
+        <div className="relative overflow-hidden rounded-[2rem] shadow-soft">
+          <Image
+            src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=1200&q=80"
+            alt="Students in a collaborative learning environment"
+            width={1200}
+            height={900}
+            className="h-full w-full object-cover"
+            sizes="(min-width: 1024px) 50vw, 100vw"
           />
         </div>
 
-        {/* 📄 Content */}
-        <div className="animate-in fade-in slide-in-from-right duration-700">
-          {/* 🟡 Accent */}
-          <div className="w-16 h-1 bg-accent mb-6"></div>
-
-          {/* 🧠 Heading */}
-          <h2 className="text-3xl md:text-4xl font-bold text-primary">
-            About Tour Study Uganda
+        <div>
+          <div className="w-16 h-1 rounded-full bg-accent mb-6"></div>
+          <p className="text-sm font-semibold uppercase tracking-[0.28em] text-primary/70">About Us</p>
+          <h2 className="mt-3 text-3xl font-bold text-primary md:text-4xl">
+            A more grounded way to start the study abroad journey.
           </h2>
 
-          {/* ✍️ Text (Typography plugin used) */}
-          <div className="prose mt-6 max-w-none">
+          <div className="prose prose-slate mt-6 max-w-none text-slate-600">
             <p>
-              Tour Study Uganda Limited bridges Ugandan students to global
-              education opportunities. Founded by former international scholars,
-              we help students navigate their study abroad journey seamlessly.
+              Tour Study Uganda supports students who want better educational opportunities
+              abroad but need practical guidance to understand where to begin.
             </p>
-
             <p>
-              Uganda has a growing education sector, but many students face
-              challenges such as high cut-off points, limited program options,
-              and overcrowded institutions.
+              We help students and families make informed choices by explaining entry routes,
+              university options, documentation, and the preparation needed before travel.
             </p>
-
             <p>
-              We expand students’ horizons by connecting them to top-tier
-              universities abroad with better facilities, diverse programs, and
-              international exposure.
+              Our approach is warm, realistic, and personal. The goal is not just to secure an
+              offer, but to help each student move with clarity and confidence.
             </p>
           </div>
 
-          {/* 🎯 Vision & Mission */}
-          <div className="mt-8 space-y-4">
-            <div className="p-4 border-l-4 border-accent bg-gray-50">
-              <h4 className="font-semibold text-primary">Our Vision</h4>
-              <p className="text-sm">
-                To be the bridge connecting Ugandan students to world-class
-                academic opportunities that transform lives and communities.
+          <div className="mt-8 grid gap-5 sm:grid-cols-2">
+            <div className="rounded-2xl border border-slate-200 bg-white p-6 shadow-soft">
+              <h3 className="text-lg font-semibold text-primary">Our Vision</h3>
+              <p className="mt-3 text-sm leading-6 text-slate-600">
+                To widen access to quality global education for Ugandan students through trusted guidance.
               </p>
             </div>
-
-            <div className="p-4 border-l-4 border-accent bg-gray-50">
-              <h4 className="font-semibold text-primary">Our Mission</h4>
-              <p className="text-sm">
-                To empower students by connecting them with the best education
-                opportunities abroad and ensuring a smooth transition into their
-                new environments.
+            <div className="rounded-2xl border border-slate-200 bg-white p-6 shadow-soft">
+              <h3 className="text-lg font-semibold text-primary">Our Mission</h3>
+              <p className="mt-3 text-sm leading-6 text-slate-600">
+                To guide students through applications, preparation, and transition with honesty and care.
               </p>
-            </div>
-          </div>
-
-          <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 gap-6">
-            <div className="bg-gray-50 p-6 rounded-xl text-center">
-              <h3 className="text-3xl font-bold text-primary">2+</h3>
-              <p className="text-gray-600">Years of Experience</p>
-            </div>
-
-            <div className="bg-gray-50 p-6 rounded-xl text-center">
-              <h3 className="text-3xl font-bold text-primary">Global</h3>
-              <p className="text-gray-600">University Access</p>
             </div>
           </div>
         </div>
