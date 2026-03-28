@@ -8,8 +8,8 @@ export default function manifest(): MetadataRoute.Manifest {
       "A Future Beyond Borders. Study abroad guidance for students seeking education opportunities abroad.",
     start_url: "/",
     display: "standalone",
-    background_color: "#f8fbfd",
-    theme_color: "#123a63",
+    background_color: "#fbf9fd",
+    theme_color: "#734F96",
     icons: [
       {
         src: "/fevacon.jpeg",

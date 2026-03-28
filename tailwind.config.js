@@ -10,16 +10,16 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        primary: "#123a63",
+        primary: "#734F96",
         accent: "#d59a43",
-        ink: "#102033",
-        mist: "#eef4f8",
+        ink: "#2f2140",
+        mist: "#f4eef8",
       },
       boxShadow: {
-        soft: "0 18px 50px rgba(16, 32, 51, 0.12)",
+        soft: "0 18px 50px rgba(47, 33, 64, 0.14)",
       },
       backgroundImage: {
-        "hero-grid": "radial-gradient(circle at top, rgba(213, 154, 67, 0.14), transparent 35%), linear-gradient(135deg, rgba(18, 58, 99, 0.94), rgba(9, 20, 34, 0.86))",
+        "hero-grid": "radial-gradient(circle at top, rgba(213, 154, 67, 0.14), transparent 35%), linear-gradient(135deg, rgba(115, 79, 150, 0.96), rgba(75, 48, 108, 0.9))",
       },
     },
   },

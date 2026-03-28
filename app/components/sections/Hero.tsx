@@ -9,9 +9,12 @@ const highlights = [
 
 export default function Hero() {
   return (
-    <section id="home" className="relative overflow-hidden bg-hero-grid text-white">
+    <section
+      id="home"
+      className="relative overflow-hidden bg-hero-grid text-white"
+    >
       <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&w=1600&q=80')] bg-cover bg-center opacity-20" />
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(213,154,67,0.35),transparent_25%)]" />
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(213,154,67,0.3),transparent_25%)]" />
 
       <div className="relative max-w-7xl mx-auto px-6 py-24 md:py-32">
         <div className="grid items-center gap-14 lg:grid-cols-[1.1fr_0.9fr]">
@@ -78,7 +81,7 @@ export default function Hero() {
               </div>
             </div>
 
-            <div className="mt-4 rounded-[1.5rem] bg-[#0c1c2f]/80 p-6">
+            <div className="mt-4 rounded-[1.5rem] bg-[#583a79]/90 p-6">
               <p className="text-sm uppercase tracking-[0.24em] text-accent">
                 Why this matters
               </p>

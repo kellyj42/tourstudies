@@ -1,4 +1,21 @@
-import { BriefcaseBusiness, Building2, Globe2, GraduationCap, Network, Sparkles } from "lucide-react";
+import {
+  BriefcaseBusiness,
+  Building2,
+  Globe2,
+  GraduationCap,
+  Network,
+  Sparkles,
+} from "lucide-react";
+
+const countries = [
+  "India",
+  "Austria",
+  "Hungary",
+  "Germany",
+  "Czech Republic",
+  "Cyprus",
+  "Malta",
+];
 
 const solutions = [
   {
@@ -18,7 +35,7 @@ const solutions = [
   },
   {
     name: "Exposure",
-    note: "Studying abroad expands a student&apos;s worldview and confidence in new environments.",
+    note: "Studying abroad expands a student's worldview and confidence in new environments.",
     icon: Globe2,
   },
   {
@@ -45,6 +62,25 @@ export default function Destinations() {
           <p className="mt-5 text-lg leading-8 text-slate-600">
             Tour Study Uganda Ltd expands students&apos; horizons by connecting them to top-tier international institutions, broader academic programs, better facilities, and the life-changing advantages that come with studying abroad.
           </p>
+        </div>
+
+        <div className="mt-8 rounded-[1.75rem] border border-slate-200 bg-white p-6 shadow-soft">
+          <p className="text-sm font-semibold uppercase tracking-[0.22em] text-primary/70">
+            Countries of Destination
+          </p>
+          <p className="mt-3 text-base leading-7 text-slate-600">
+            India, Austria, Hungary, Germany, Czech Republic, Cyprus, and Malta.
+          </p>
+          <div className="mt-5 flex flex-wrap gap-3">
+            {countries.map((country) => (
+              <span
+                key={country}
+                className="rounded-full bg-mist px-4 py-2 text-sm font-medium text-primary"
+              >
+                {country}
+              </span>
+            ))}
+          </div>
         </div>
 
         <div className="mt-12 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
