@@ -15,13 +15,13 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Tour Study Uganda | Study Abroad Guidance for Ugandan Students",
+  title: "Tour Study Uganda Ltd | A Future Beyond Borders",
   description:
-    "Tour Study Uganda helps students explore universities abroad with application guidance, visa preparation, and relocation support.",
+    "Tour Study Uganda Ltd helps students access alternative education opportunities abroad through university placement, application guidance, visa support, and transition preparation.",
   openGraph: {
-    title: "Tour Study Uganda",
+    title: "Tour Study Uganda Ltd",
     description:
-      "A student-first study abroad advisory for Ugandan students seeking trusted support from consultation to departure.",
+      "A Future Beyond Borders. Supporting students with study abroad placement, guidance, and transition support.",
     type: "website",
   },
 };

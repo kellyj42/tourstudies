@@ -1,8 +1,8 @@
 const stats = [
-  { value: "Student-first", label: "Guidance shaped around each applicant's goals and budget" },
-  { value: "Clear process", label: "Simple steps from consultation to departure preparation" },
-  { value: "Practical advice", label: "No vague promises, just realistic pathways and support" },
-  { value: "Kampala based", label: "Local support with international study perspective" },
+  { value: "2+ Years", label: "Of study abroad guidance experience" },
+  { value: "2 Founders", label: "Former international scholars leading TSUL" },
+  { value: "60,000", label: "Approximate annual local university admissions" },
+  { value: "53,000+", label: "Qualified students left without local placement by 2025" },
 ];
 
 export default function CredibilityStrip() {

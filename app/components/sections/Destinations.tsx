@@ -1,35 +1,35 @@
-import { BookOpenCheck, Building2, Globe2, Landmark, Microscope, PlaneTakeoff } from "lucide-react";
+import { BriefcaseBusiness, Building2, Globe2, GraduationCap, Network, Sparkles } from "lucide-react";
 
-const destinations = [
+const solutions = [
   {
-    name: "United Kingdom",
-    note: "Popular for health sciences, business, and postgraduate pathways.",
-    icon: Landmark,
-  },
-  {
-    name: "Europe",
-    note: "A mix of public and private institutions with diverse course options.",
-    icon: Globe2,
-  },
-  {
-    name: "Asia",
-    note: "Strong value-for-money opportunities in emerging education hubs.",
+    name: "Top-tier Institutions",
+    note: "We connect students to reputable international institutions with stronger academic options.",
     icon: Building2,
   },
   {
-    name: "Science Programs",
-    note: "Support for students searching for technical, medical, and laboratory-focused routes.",
-    icon: Microscope,
+    name: "Broader Programs",
+    note: "Students can explore in-demand and emerging courses not readily available locally.",
+    icon: GraduationCap,
   },
   {
-    name: "Foundation Routes",
-    note: "Alternative entry paths for students building toward degree-level admission.",
-    icon: BookOpenCheck,
+    name: "Better Facilities",
+    note: "International exposure often comes with stronger learning environments and resources.",
+    icon: Sparkles,
   },
   {
-    name: "Travel Planning",
-    note: "Guidance on timelines, travel readiness, and settling-in expectations.",
-    icon: PlaneTakeoff,
+    name: "Exposure",
+    note: "Studying abroad expands a student&apos;s worldview and confidence in new environments.",
+    icon: Globe2,
+  },
+  {
+    name: "Work Experience",
+    note: "Students gain access to practical learning and career-building opportunities.",
+    icon: BriefcaseBusiness,
+  },
+  {
+    name: "Global Networking",
+    note: "International study helps students build relationships beyond their local environment.",
+    icon: Network,
   },
 ];
 
@@ -40,16 +40,15 @@ export default function Destinations() {
         <div className="max-w-3xl">
           <div className="w-16 h-1 rounded-full bg-accent mb-6"></div>
           <h2 className="text-3xl font-bold text-primary md:text-4xl">
-            Opportunities that feel broader than the usual shortlist.
+            Our solution to the growing access gap.
           </h2>
           <p className="mt-5 text-lg leading-8 text-slate-600">
-            A stronger website looks more legitimate when it shows direction. This section gives
-            visitors a quick sense of the countries, pathways, and program styles you can guide them through.
+            Tour Study Uganda Ltd expands students&apos; horizons by connecting them to top-tier international institutions, broader academic programs, better facilities, and the life-changing advantages that come with studying abroad.
           </p>
         </div>
 
         <div className="mt-12 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
-          {destinations.map((item) => {
+          {solutions.map((item) => {
             const Icon = item.icon;
             return (
               <div key={item.name} className="rounded-[1.75rem] border border-slate-200 bg-white p-6 shadow-soft transition hover:-translate-y-1">

@@ -12,10 +12,10 @@ import {
 } from "recharts";
 
 const data = [
-  { year: "2022", admitted: 60000, leftOut: 67815 },
-  { year: "2023", admitted: 60000, leftOut: 80643 },
-  { year: "2024", admitted: 60000, leftOut: 92273 },
-  { year: "2025", admitted: 60000, leftOut: 113291 },
+  { year: "2022", admitted: 60000, eligible: 67815 },
+  { year: "2023", admitted: 60000, eligible: 80643 },
+  { year: "2024", admitted: 60000, eligible: 92273 },
+  { year: "2025", admitted: 60000, eligible: 113291 },
 ];
 
 export default function StudentGraphClient() {
@@ -30,15 +30,15 @@ export default function StudentGraphClient() {
         <Line
           type="monotone"
           dataKey="admitted"
-          name="Estimated admitted"
+          name="Admitted locally"
           stroke="#22c55e"
           strokeWidth={3}
           dot={{ r: 4 }}
         />
         <Line
           type="monotone"
-          dataKey="leftOut"
-          name="Estimated left out"
+          dataKey="eligible"
+          name="Eligible students"
           stroke="#d97706"
           strokeWidth={3}
         />

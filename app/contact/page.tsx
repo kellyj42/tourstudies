@@ -10,8 +10,8 @@ const contactCards = [
     accent: "text-green-600",
   },
   {
-    title: "Call",
-    detail: "0701 882166",
+    title: "Phone",
+    detail: "0701 882166 / 0758 335558",
     href: "tel:+256701882166",
     icon: Phone,
     accent: "text-primary",
@@ -31,9 +31,9 @@ export default function Contact() {
       <div className="max-w-6xl mx-auto px-6">
         <div className="text-center">
           <div className="w-16 h-1 rounded-full bg-accent mx-auto mb-4"></div>
-          <h1 className="text-3xl md:text-5xl font-bold text-primary">Contact Tour Study Uganda</h1>
+          <h1 className="text-3xl md:text-5xl font-bold text-primary">Contact Tour Study Uganda Ltd</h1>
           <p className="mt-4 text-lg text-slate-600 max-w-2xl mx-auto leading-8">
-            Reach out for a conversation about study options, application preparation, or what the process could look like for you.
+            Reach out for support with university placement, country selection, applications, visa guidance, or your next step toward studying abroad.
           </p>
         </div>
 
@@ -71,12 +71,12 @@ export default function Contact() {
           </div>
 
           <div className="rounded-[2rem] bg-white p-8 shadow-soft">
-            <h2 className="text-2xl font-semibold text-primary">What to prepare before contacting us</h2>
+            <h2 className="text-2xl font-semibold text-primary">Contact Information</h2>
             <div className="mt-6 space-y-4 text-sm leading-7 text-slate-600">
-              <p>1. Your preferred course or field of study.</p>
-              <p>2. Your latest academic results or qualifications.</p>
-              <p>3. Any country preferences or budget concerns.</p>
-              <p>4. Questions about applications, visas, or timelines.</p>
+              <p><strong>Phone:</strong> 0701 882166, 0758 335558</p>
+              <p><strong>WhatsApp:</strong> 0758 335558</p>
+              <p><strong>Email:</strong> tourstudyug@gmail.com</p>
+              <p><strong>Location:</strong> Lukuli Road, Kampala</p>
             </div>
 
             <div className="mt-8 rounded-[1.5rem] bg-mist p-5">

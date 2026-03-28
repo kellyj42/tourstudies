@@ -3,21 +3,21 @@ import { HeartHandshake, ShieldCheck, Sparkles } from "lucide-react";
 
 const reasons = [
   {
-    title: "Empathy-led guidance",
+    title: "Empathy-Driven Guidance",
     description:
-      "We understand the emotional and practical weight behind a study abroad decision, so our advice is patient, realistic, and personal.",
+      "We guide students using firsthand experience from our own international journeys, offering practical insights and support.",
     icon: HeartHandshake,
   },
   {
-    title: "Support beyond admission",
+    title: "Holistic Support",
     description:
-      "Students need help with documents, next steps, travel readiness, and expectations. We support the full journey, not just the first form.",
+      "Our services go beyond admission. We help students prepare for a smooth transition and successful settlement in the host country.",
     icon: ShieldCheck,
   },
   {
-    title: "Focused on better-fit pathways",
+    title: "Specialized Program Focus",
     description:
-      "We help students explore strong alternatives, including science and niche program routes that may be harder to access locally.",
+      "We connect students to top-tier universities offering modern and in-demand programs not readily available locally.",
     icon: Sparkles,
   },
 ];
@@ -28,9 +28,9 @@ export default function WhyUs() {
       <div className="max-w-7xl mx-auto px-6 grid items-center gap-12 lg:grid-cols-2">
         <div>
           <div className="w-16 h-1 rounded-full bg-accent mb-6"></div>
-          <h2 className="text-3xl font-bold md:text-4xl">Why families feel safer working with us.</h2>
+          <h2 className="text-3xl font-bold md:text-4xl">Why choose Tour Study Uganda Ltd</h2>
           <p className="mt-5 max-w-2xl text-lg leading-8 text-slate-200">
-            Legitimacy comes from clarity, care, and confidence. These are the qualities this section now communicates more strongly.
+            Our support is built on empathy, experience, and a clear understanding of the opportunities students need beyond local limitations.
           </p>
 
           <div className="mt-10 space-y-5">

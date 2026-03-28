@@ -12,9 +12,12 @@ const StudentGraphClient = dynamic(() => import("./StudentGraphClient"), {
 export default function StudentGraph() {
   return (
     <div className="w-full rounded-[1.75rem] border border-slate-200 bg-white p-5 shadow-soft">
-      <h3 className="text-center font-semibold text-primary mb-5">
-        Demand for higher education continues to outpace available places.
+      <h3 className="text-center font-semibold text-primary mb-2">
+        University access trend, 2022 to 2025
       </h3>
+      <p className="text-center text-sm text-slate-500 mb-5">
+        Green shows students admitted locally. Orange shows total eligible students.
+      </p>
 
       <div className="h-[320px]">
         <StudentGraphClient />

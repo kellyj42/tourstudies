@@ -17,23 +17,22 @@ export default function About() {
 
         <div>
           <div className="w-16 h-1 rounded-full bg-accent mb-6"></div>
-          <p className="text-sm font-semibold uppercase tracking-[0.28em] text-primary/70">About Us</p>
+          <p className="text-sm font-semibold uppercase tracking-[0.28em] text-primary/70">
+            About Tour Study Uganda Ltd
+          </p>
           <h2 className="mt-3 text-3xl font-bold text-primary md:text-4xl">
-            A more grounded way to start the study abroad journey.
+            Helping students access a future beyond borders.
           </h2>
 
           <div className="prose prose-slate mt-6 max-w-none text-slate-600">
             <p>
-              Tour Study Uganda supports students who want better educational opportunities
-              abroad but need practical guidance to understand where to begin.
+              Tour Study Uganda Ltd bridges Uganda&apos;s students to alternative education opportunities abroad.
             </p>
             <p>
-              We help students and families make informed choices by explaining entry routes,
-              university options, documentation, and the preparation needed before travel.
+              Founded by two former international scholars, TSUL supports students who need guidance in choosing the right institutions, preparing applications, and transitioning smoothly into international study environments.
             </p>
             <p>
-              Our approach is warm, realistic, and personal. The goal is not just to secure an
-              offer, but to help each student move with clarity and confidence.
+              With over 2 years of experience, we are committed to helping students access broader academic programs, better facilities, and global exposure.
             </p>
           </div>
 
@@ -41,13 +40,13 @@ export default function About() {
             <div className="rounded-2xl border border-slate-200 bg-white p-6 shadow-soft">
               <h3 className="text-lg font-semibold text-primary">Our Vision</h3>
               <p className="mt-3 text-sm leading-6 text-slate-600">
-                To widen access to quality global education for Ugandan students through trusted guidance.
+                To be the bridge connecting Uganda&apos;s students to world-class academic institutions, cutting-edge programs, and international opportunities that transform lives and communities.
               </p>
             </div>
             <div className="rounded-2xl border border-slate-200 bg-white p-6 shadow-soft">
               <h3 className="text-lg font-semibold text-primary">Our Mission</h3>
               <p className="mt-3 text-sm leading-6 text-slate-600">
-                To guide students through applications, preparation, and transition with honesty and care.
+                To empower students by connecting them with the best education opportunities abroad, fostering academic excellence, and ensuring a seamless transition into the culture of host institutions.
               </p>
             </div>
           </div>

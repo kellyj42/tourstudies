@@ -3,27 +3,27 @@ import { FileCheck, GraduationCap, Home, Plane } from "lucide-react";
 export default function Services() {
   const services = [
     {
-      title: "University Placement Support",
+      title: "Personalized university placement and country selection",
       description:
-        "Guidance on choosing suitable institutions and programs that align with the student's academic goals.",
+        "We help students identify the right university and the right country based on their goals and available opportunities.",
       icon: GraduationCap,
     },
     {
-      title: "Visa and Documentation Guidance",
+      title: "Expert application and visa guidance",
       description:
-        "Support with preparing the paperwork and information needed for a stronger application process.",
+        "Students receive practical support through application preparation and visa guidance for a smoother process.",
       icon: FileCheck,
     },
     {
-      title: "Pre-Departure Preparation",
+      title: "Pre-departure orientation and cultural preparation",
       description:
-        "Practical briefings on travel, student expectations, and how to prepare for life in a new environment.",
+        "We prepare students for life abroad by explaining expectations, culture, and key travel considerations before departure.",
       icon: Plane,
     },
     {
-      title: "Arrival and Settling Support",
+      title: "Post-arrival support",
       description:
-        "Help students think through housing, transition, and the first steps after arrival.",
+        "We support students with housing, mentorship, and integration tips as they settle into the host country.",
       icon: Home,
     },
   ];
@@ -33,9 +33,9 @@ export default function Services() {
       <div className="max-w-7xl mx-auto px-6">
         <div className="text-center max-w-3xl mx-auto">
           <div className="w-16 h-1 rounded-full bg-accent mx-auto mb-6"></div>
-          <h2 className="text-3xl font-bold text-primary md:text-4xl">Services that make the offer feel complete.</h2>
+          <h2 className="text-3xl font-bold text-primary md:text-4xl">Our Services</h2>
           <p className="mt-5 text-lg leading-8 text-slate-600">
-            This section now reads like a real advisory service, not just a placeholder list of features.
+            Tour Study Uganda Ltd supports students before departure and after arrival with practical guidance at every stage.
           </p>
         </div>
 
