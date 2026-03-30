@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Mail, MapPin, MessageCircle, Phone } from "lucide-react";
+import { BriefcaseBusiness, Camera, Mail, MapPin, MessageCircle, Phone } from "lucide-react";
 
 const contactCards = [
   {
@@ -23,6 +23,20 @@ const contactCards = [
     icon: Mail,
     accent: "text-accent",
   },
+  {
+    title: "Instagram",
+    detail: "@tourstudyug48",
+    href: "https://www.instagram.com/tourstudyug48?utm_source=qr&igsh=aHYzOGlkbmFnZ2hh",
+    icon: Camera,
+    accent: "text-primary",
+  },
+  {
+    title: "LinkedIn",
+    detail: "Tour Study Uganda",
+    href: "https://www.linkedin.com/company/tourstudyug/",
+    icon: BriefcaseBusiness,
+    accent: "text-primary",
+  },
 ];
 
 export default function Contact() {
@@ -37,7 +51,7 @@ export default function Contact() {
           </p>
         </div>
 
-        <div className="mt-12 grid gap-6 md:grid-cols-3">
+        <div className="mt-12 grid gap-6 md:grid-cols-2 xl:grid-cols-5">
           {contactCards.map((card) => {
             const Icon = card.icon;
             return (
@@ -76,6 +90,8 @@ export default function Contact() {
               <p><strong>Phone:</strong> 0701 882166, 0758 335558</p>
               <p><strong>WhatsApp:</strong> 0758 335558</p>
               <p><strong>Email:</strong> tourstudyug@gmail.com</p>
+              <p><strong>Instagram:</strong> @tourstudyug48</p>
+              <p><strong>LinkedIn:</strong> Tour Study Uganda</p>
               <p><strong>Location:</strong> Lukuli Road, Kampala</p>
             </div>
 
@@ -89,7 +105,7 @@ export default function Contact() {
               </div>
             </div>
 
-            <div className="mt-8 flex flex-col gap-4 sm:flex-row">
+            <div className="mt-8 flex flex-col gap-4 sm:flex-row sm:flex-wrap">
               <Link
                 href="https://wa.me/256758335558"
                 target="_blank"
@@ -97,6 +113,22 @@ export default function Contact() {
                 className="inline-flex justify-center rounded-full bg-accent px-6 py-3 font-semibold text-white"
               >
                 Message on WhatsApp
+              </Link>
+              <Link
+                href="https://www.instagram.com/tourstudyug48?utm_source=qr&igsh=aHYzOGlkbmFnZ2hh"
+                target="_blank"
+                rel="noreferrer"
+                className="inline-flex justify-center rounded-full border border-slate-300 px-6 py-3 font-semibold text-primary"
+              >
+                Follow on Instagram
+              </Link>
+              <Link
+                href="https://www.linkedin.com/company/tourstudyug/"
+                target="_blank"
+                rel="noreferrer"
+                className="inline-flex justify-center rounded-full border border-slate-300 px-6 py-3 font-semibold text-primary"
+              >
+                Connect on LinkedIn
               </Link>
               <Link
                 href="mailto:tourstudyug@gmail.com"

@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Mail, MapPin, MessageCircle, Phone } from "lucide-react";
+import { BriefcaseBusiness, Camera, Mail, MapPin, MessageCircle, Phone } from "lucide-react";
 
 const quickLinks = [
   { label: "Home", href: "/#home" },
@@ -42,16 +42,54 @@ export default function Footer() {
               <li className="flex items-center gap-3"><MessageCircle size={16} /> 0758 335558</li>
               <li className="flex items-center gap-3"><Mail size={16} /> tourstudyug@gmail.com</li>
               <li className="flex items-center gap-3"><MapPin size={16} /> Lukuli Road, Kampala</li>
+              <li>
+                <Link
+                  href="https://www.instagram.com/tourstudyug48?utm_source=qr&igsh=aHYzOGlkbmFnZ2hh"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="inline-flex items-center gap-3 transition hover:text-white"
+                >
+                  <Camera size={16} /> @tourstudyug48
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="https://www.linkedin.com/company/tourstudyug/"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="inline-flex items-center gap-3 transition hover:text-white"
+                >
+                  <BriefcaseBusiness size={16} /> Tour Study Uganda on LinkedIn
+                </Link>
+              </li>
             </ul>
 
-            <Link
-              href="https://wa.me/256758335558"
-              target="_blank"
-              rel="noreferrer"
-              className="inline-flex items-center gap-2 mt-5 rounded-full bg-accent px-5 py-2.5 font-semibold text-white"
-            >
-              <MessageCircle size={16} /> Chat on WhatsApp
-            </Link>
+            <div className="mt-5 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
+              <Link
+                href="https://wa.me/256758335558"
+                target="_blank"
+                rel="noreferrer"
+                className="inline-flex items-center gap-2 rounded-full bg-accent px-5 py-2.5 font-semibold text-white"
+              >
+                <MessageCircle size={16} /> Chat on WhatsApp
+              </Link>
+              <Link
+                href="https://www.instagram.com/tourstudyug48?utm_source=qr&igsh=aHYzOGlkbmFnZ2hh"
+                target="_blank"
+                rel="noreferrer"
+                className="inline-flex items-center gap-2 rounded-full border border-white/25 px-5 py-2.5 font-semibold text-white"
+              >
+                <Camera size={16} /> Follow on Instagram
+              </Link>
+              <Link
+                href="https://www.linkedin.com/company/tourstudyug/"
+                target="_blank"
+                rel="noreferrer"
+                className="inline-flex items-center gap-2 rounded-full border border-white/25 px-5 py-2.5 font-semibold text-white"
+              >
+                <BriefcaseBusiness size={16} /> Connect on LinkedIn
+              </Link>
+            </div>
           </div>
         </div>
 
